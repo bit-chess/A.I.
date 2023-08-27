@@ -1,0 +1,1 @@
+g++ Algorithm/*.cpp Run/main.cpp -o run && ./run
