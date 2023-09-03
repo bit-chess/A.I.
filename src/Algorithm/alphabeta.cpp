@@ -1,6 +1,8 @@
 #include <bits/stdc++.h>
 #include "alphabeta.hpp"
 
+using namespace std;
+
 void print(){
-    printf("eai\n");
+    printf("eaiii\n");
 }

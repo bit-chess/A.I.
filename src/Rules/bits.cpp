@@ -2,6 +2,8 @@
 #include <bits/stdc++.h>
 
 Bits our_game;
+char initPosBlack[] = { 't', 'c', 'b', 'q', 'k', 'b', 'c', 't' };
+char initPosWhite[] = { 'T', 'C', 'B', 'Q', 'K', 'B', 'C', 'T' };
 
 void buildBits(void){
     for (int i = 0; i < 8; i++) {

@@ -3,9 +3,6 @@
 
 #include <bits/stdc++.h>
 
-char initPosBlack[] = { 't', 'c', 'b', 'q', 'k', 'b', 'c', 't' };
-char initPosWhite[] = { 'T', 'C', 'B', 'Q', 'K', 'B', 'C', 'T' };
-
 typedef struct{
     char chessBoard[8][8];
     
