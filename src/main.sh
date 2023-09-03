@@ -1,1 +1,1 @@
-g++ Algorithm/*.cpp Run/main.cpp -o run && ./run
+g++ Algorithm/alphabeta.cpp Run/main.cpp Rules/bits.cpp -o run && ./run
