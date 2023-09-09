@@ -1,7 +1,7 @@
 #ifndef BITS_HPP
 #define BITS_HPP
 
-#include <bits/stdc++.h>
+#include <stdint.h>
 
 typedef struct{
     char chessBoard[8][8];

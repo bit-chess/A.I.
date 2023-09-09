@@ -1,4 +1,3 @@
-#include <bits/stdc++.h>
 #include "alphabeta.hpp"
 #include "graph_builder.hpp"
 #include "../Rules/bits.hpp"

@@ -1,5 +1,5 @@
 #include "bits.hpp"
-#include <bits/stdc++.h>
+#include <string.h>
 
 Bits our_game;
 char initPosBlack[] = { 't', 'c', 'b', 'q', 'k', 'b', 'c', 't' };

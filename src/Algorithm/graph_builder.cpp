@@ -1,4 +1,6 @@
-#include <bits/stdc++.h>
+#include <stdio.h>
+#include <vector>
+#include <queue>
 #include "graph_builder.hpp"
 #include "../Rules/bits.hpp"
 
@@ -18,8 +20,12 @@ void build_graph(void){
 int HowManyNodes(void){
     return countNodes;
 }
-void removeBit(int node);
-void removeBitIf(int node);
+void removeBit(int node){
+    nodesPos[node] = {0};
+}
+void removeBitIf(int node){
+    if (depthNode[node] > 1) nodesPos[node] = {0};
+}
 
 void createGraph(Bits c){
     nodesPos[0] = c;
@@ -27,12 +33,23 @@ void createGraph(Bits c){
 }
 
 void createGraph(int nodeFather, Bits u){
-    if(nodeFather==-1) return;
+    if(nodeFather != -1) {
+        nodesPos[countNodes] = u;
+        graph[nodeFather].push_back(nodeFather);
+        depthNode[countNodes] = depthNode[nodeFather] + 1;
+        countNodes++;
+    }	
+}
 
-    nodesPos[countNodes] = u;
-    graph[nodeFather].push_back(nodeFather);
-    depthNode[countNodes] = depthNode[nodeFather] + 1;
-    countNodes++;		
+void createGraph(int nodeFather, vector<Bits> & u){
+    if(nodeFather != -1) {
+        for (Bits son : u) {
+            nodesPos[countNodes] = son;
+            graph[nodeFather].push_back(countNodes);
+            depthNode[countNodes] = depthNode[nodeFather] + 1;
+            countNodes++;
+        }
+    }
 }
 
 void setWeight(int u, double weight){
