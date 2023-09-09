@@ -1,5 +1,5 @@
-#ifndef MANIPULATOR_CPP
-#define MANIPULATOR_CPP
+#ifndef MANIPULATOR_CPP_H
+#define MANIPULATOR_CPP_H
 
 #include <bits/stdc++.h>
 
