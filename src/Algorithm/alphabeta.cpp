@@ -1,8 +1,9 @@
 #include <bits/stdc++.h>
 #include "alphabeta.hpp"
+#include "graph_builder.hpp"
 
 using namespace std;
 
-void print(){
-    printf("eaiii\n");
+void AlphaBeta(Bits bit){
+    createGraph(bit);
 }
