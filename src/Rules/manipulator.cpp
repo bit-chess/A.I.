@@ -11,5 +11,5 @@ int popcount(int64_t bit){
 
 int lsb(int64_t bit){
     std::bitset<64> bits(bit);
-    return bits._FindFist();
+    return bits._Find_fist();
 }
