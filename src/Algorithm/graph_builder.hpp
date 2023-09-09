@@ -1,10 +1,9 @@
-#ifndef GRAPHBUILDER_HPP
-#define GRAPHBUILDER_HPP
+#ifndef GRAPHBUILDER_HPP_H
+#define GRAPHBUILDER_HPP_H
 
-#include <bits/stdc++.h>
 #include "../Rules/bits.hpp"
 
-const int maxn = 1e5+10;
+#define maxn 100010
 
 void build_graph(void);
 int HowManyNodes(void);
