@@ -5,14 +5,14 @@ int popcount(int64_t bit){
     int count = 0;
     while (bit) {
        count++;
-       x &= x - 1; 
+       bit &= bit - 1; 
     }
     return count;
 }
 
 int lsb(int64_t bit){
     std::bitset<64> bits(bit);
-    return bits._Find_fist();
+    return bits._Find_first();
 }
 
 int64_t northFillBlock(int64_t b, int64_t emp){
