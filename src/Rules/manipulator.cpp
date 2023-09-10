@@ -16,10 +16,10 @@ int lsb(int64_t bit){
 }
 
 int64_t northFillBlock(int64_t b, int64_t emp){
-    b |= emp & (g <<  8);
-    emp &=     (p <<  8);
-    b |= emp & (g << 16);
-    emp &=     (p << 16);
-    b |= emp & (g << 32);
+    b |= emp & (b <<  8);
+    emp &=(emp <<  8);
+    b |= emp & (b << 16);
+    emp &=(emp << 16);
+    b |= emp & (b << 32);
     return b;
 }
