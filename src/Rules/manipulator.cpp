@@ -1,4 +1,5 @@
-#include <bits/stdc++.h>
+#include <bitset>
+#include <stdint.h>
 
 int popcount(int64_t bit){
     int count = 0;

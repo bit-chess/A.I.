@@ -1,8 +1,7 @@
 #ifndef MANIPULATOR_CPP_H
 #define MANIPULATOR_CPP_H
 
-#include <bits/stdc++.h>
-
+#include <stdint.h>
 
 int popcount(int64_t bit);
 int lsb(int64_t bit);
