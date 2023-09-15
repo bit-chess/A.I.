@@ -4,6 +4,8 @@
         "vector": "cpp",
         "iosfwd": "cpp",
         "iterator": "cpp",
-        "bitset": "cpp"
+        "bitset": "cpp",
+        "compare": "cpp",
+        "cstdint": "cpp"
     }
 }
