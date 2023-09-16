@@ -6,6 +6,7 @@
         "iterator": "cpp",
         "bitset": "cpp",
         "compare": "cpp",
-        "cstdint": "cpp"
+        "cstdint": "cpp",
+        "format": "cpp"
     }
 }
