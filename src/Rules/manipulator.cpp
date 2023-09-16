@@ -172,4 +172,10 @@ uint64_t eastattack(uint64_t pieces, uint64_t emp) {
    return pieces<<1 & notafile;
 }
 
-uint64_t genrook()
+uint64_t genrookattack(uint64_t pieces, uint64_t emp) {
+    return eastattack(pieces, emp) | westattack(pieces, emp) | northattack(pieces, emp) | southattack(pieces, emp);
+}
+
+uint64_t genbishopattack(uint64_t pieces, uint64_t emp) {
+    return nwattack(pieces, emp) | neattack(pieces, emp) | swattack(pieces, emp) | seattack(pieces, emp);
+}
