@@ -132,7 +132,7 @@ uint64_t seattack(uint64_t pieces, uint64_t emp){
 }
 
 
-uint64_t westfill(U64 pieces, U64 emp) {
+uint64_t westfill(uint64_t pieces, uint64_t emp) {
    emp &= nothfile;
    pieces |= emp & (pieces >> 1);
    emp &= (emp >> 1);
@@ -142,7 +142,7 @@ uint64_t westfill(U64 pieces, U64 emp) {
    return pieces;
 }
 
-uint64_t westattack(U64 pieces, U64 emp) {
+uint64_t westattack(uint64_t pieces, uint64_t emp) {
    emp &= nothfile;
    pieces |= emp & (pieces >> 1);
    emp &= (emp >> 1);
@@ -152,7 +152,7 @@ uint64_t westattack(U64 pieces, U64 emp) {
    return pieces>>1 & nothfile;
 }
 
-uint64_t eastfill(U64 pieces, U64 emp) {
+uint64_t eastfill(uint64_t pieces, uint64_t emp) {
    emp &= notafile;
    pieces |= emp & (pieces << 1);
    emp &= (emp << 1);
@@ -162,7 +162,7 @@ uint64_t eastfill(U64 pieces, U64 emp) {
    return pieces;
 }
 
-uint64_t eastattack(U64 pieces, U64 emp) {
+uint64_t eastattack(uint64_t pieces, uint64_t emp) {
    emp &= notafile;
    pieces |= emp & (pieces << 1);
    emp &= (emp << 1);
@@ -171,3 +171,5 @@ uint64_t eastattack(U64 pieces, U64 emp) {
    pieces |= emp & (pieces << 4);
    return pieces<<1 & notafile;
 }
+
+uint64_t genrook()
