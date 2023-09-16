@@ -3,9 +3,9 @@
 
 #include <stdint.h>
 
-int popcount(int64_t bit);
-int lsb(int64_t bit);
-int msb(int64_t bit);
+int popcount(uint64_t bit);
+int lsb(uint64_t bit);
+int msb(uint64_t bit);
 
 
 
