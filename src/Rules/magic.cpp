@@ -1,22 +1,29 @@
 #include <magic.hpp>
 
-int magicindexrook(uint64_t occupied, int square){
+uint16_t magicindexrook(uint64_t occupied, int square){
     uint64_t blockers = occupied & moverook[square];
     uint64_t index = (blockers * rookmagic[square]) >> (64 - popcount(blockers));
-    return (int)index;
+    return (uint16_t)index;
 }
 
-//incompleto
-void testmagicrook(int square, uint64_t magic) {
-    vector<uint64_t> indexes;
+//Retorna se o número mágico gera conflitos ou não;
+//Caso gere, retorna 0;
+int testmagicrook(int square, uint64_t magic) {
+    uint64_t indices[1<<16] = {0}
     uint64_t moves = moverook[square];
-    int n = popcount(moves);
-    for (int i = 0; i<(2<<n); i++) {
-        uint64_t test = moves;
-        int x = lsb(test);
-        while (test != 0ll) {
-            
-        }
-    }
+    uint64_t n = 0;
+    do {
+      uint64_t occupied = n;
+      uint64_t attack = genrookattack(1<<square, ~occupied);
+      uint16_t magic = magicindexrook(occupied, square);
+      if (!indices[magic] && (indices[magic] != attack)){
+        return 0;
+      }
+      else{
+        indices[magic] = attack;
+      }
+      n = (n - moves) & moves;
+    } while (n);
+    return 1;
 }
 
