@@ -27,3 +27,22 @@ int testmagicrook(int square, uint64_t magic) {
     return 1;
 }
 
+int testmagicbishop(int square, uint64_t magic) {
+    uint64_t indices[1<<16] = {0}
+    uint64_t moves = movebishop[square];
+    uint64_t n = 0;
+    do {
+      uint64_t occupied = n;
+      uint64_t attack = genbishopattack(1<<square, ~occupied);
+      uint16_t magic = magicindexbishop(occupied, square);
+      if (!indices[magic] && (indices[magic] != attack)){
+        return 0;
+      }
+      else{
+        indices[magic] = attack;
+      }
+      n = (n - moves) & moves;
+    } while (n);
+    return 1;
+}
+
