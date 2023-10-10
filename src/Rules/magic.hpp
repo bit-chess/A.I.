@@ -1,6 +1,7 @@
 #ifndef MAGIC_HPP
 #define MAGIC_HPP
 
+#include <cstdlib.h>
 #include <stdint.h>
 #include <manipulator.hpp>
 

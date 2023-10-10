@@ -12,19 +12,21 @@ int testmagicrook(int square, uint64_t magic) {
     uint64_t indices[1<<16] = {0}
     uint64_t moves = moverook[square];
     uint64_t n = 0;
+    int count = 0;
     do {
       uint64_t occupied = n;
       uint64_t attack = genrookattack(1<<square, ~occupied);
-      uint16_t magic = magicindexrook(occupied, square);
-      if (!indices[magic] && (indices[magic] != attack)){
+      uint16_t index = magicindexrook(occupied, square);
+      if (!indices[index] && (indices[index] != attack)){
         return 0;
       }
       else{
-        indices[magic] = attack;
+        indices[index] = attack;
+        count++
       }
       n = (n - moves) & moves;
     } while (n);
-    return 1;
+    return count;
 }
 
 int testmagicbishop(int square, uint64_t magic) {
