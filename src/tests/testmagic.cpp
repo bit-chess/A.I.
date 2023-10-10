@@ -1,4 +1,4 @@
-#include "magic.hpp"
+#include "../Rules/magic.hpp"
 #include <random>
 
 int main(){

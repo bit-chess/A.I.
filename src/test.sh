@@ -1,0 +1,1 @@
+g++ Algorithm/*.cpp Rules/*.cpp tests/testmagic.cpp -o run && ./run

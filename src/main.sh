@@ -1,1 +1,1 @@
-g++ Algorithm/*.cpp Run/main.cpp Rules/bits.cpp -o run && ./run
+g++ Algorithm/*.cpp Run/main.cpp Rules/*.cpp -o run && ./run
