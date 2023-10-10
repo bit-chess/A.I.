@@ -1,5 +1,5 @@
-#ifndef MANIPULATOR_CPP_H
-#define MANIPULATOR_CPP_H
+#ifndef MANIPULATOR_HPP
+#define MANIPULATOR_HPP
 
 #include <stdint.h>
 

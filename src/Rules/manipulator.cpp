@@ -1,6 +1,6 @@
 #include <bitset>
 #include <stdint.h>
-#include <mask.hpp>
+#include "mask.hpp"
 
 int popcount(uint64_t bit){
     int count = 0;
