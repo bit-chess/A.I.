@@ -1,6 +1,8 @@
 #include "../Rules/magic.hpp"
 #include <random>
 
+extern uint64_t rookmagic[64];
+
 int main(){
     int k = 0;
     uint64_t magic = 0ULL;
@@ -11,7 +13,7 @@ int main(){
     std::uniform_int_distribution<uint64_t> distribution(0, std::numeric_limits<uint64_t>::max());
     
     while(k==0) {
-
+        
         uint64_t random_number = distribution(generator) & distribution(generator) & distribution(generator);
         int number = testmagicrook(square, random_number);
         k = number;

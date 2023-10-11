@@ -8,7 +8,8 @@
                 "-g",
                 "-Wall", 
                 "-std=c++17", 
-                "${fileDirname}/*.cpp",
+                "../Rules/*.cpp",
+                "testmagic.cpp",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}.exe"
             ],
