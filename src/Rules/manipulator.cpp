@@ -171,7 +171,7 @@ uint64_t eastattack(uint64_t pieces, uint64_t emp) {
    pieces |= emp & (pieces << 4);
    return pieces<<1 & notafile;
 }
-
+//TEM ERRO!!!
 uint64_t genrookattack(uint64_t pieces, uint64_t emp) {
     return eastattack(pieces, emp) | westattack(pieces, emp) | northattack(pieces, emp) | southattack(pieces, emp);
 }

@@ -12,7 +12,8 @@ uint64_t attackbishop[64][32000];
 
 uint16_t magicindexrook(uint64_t occupied, int square){
     uint64_t blockers = occupied & moverook[square];
-    uint64_t index = (blockers * rookmagic[square]) >> (57);
+    uint64_t inter = (blockers * rookmagic[square]);
+    uint64_t index = (inter) >> (52);
     return (uint16_t)index;
 }
 
@@ -20,7 +21,7 @@ uint16_t magicindexrook(uint64_t occupied, int square){
 //Caso gere, retorna 0;
 int testmagicrook(int square, uint64_t magic) {
     uint64_t indices[1<<16] = {0};
-    uint64_t moves = 0b0000100000001000000010000000100011110111000010000000100000001000ULL;
+    uint64_t moves = moverook[square];
     uint64_t n = 0;
     rookmagic[square] = magic;
     int count = 0;
