@@ -9,7 +9,7 @@
                 "-Wall", 
                 "-std=c++17", 
                 "../Rules/*.cpp",
-                "testmagic.cpp",
+                "createattackarray.cpp",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}.exe"
             ],

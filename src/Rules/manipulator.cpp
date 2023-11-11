@@ -16,7 +16,7 @@ int lsb(uint64_t bit){
     return bits._Find_first();
 }
 
-uint64_t northFill(uint64_t pieces, uint64_t emp){
+uint64_t northfill(uint64_t pieces, uint64_t emp){
     pieces |= emp & (pieces <<  8);
     emp &=(emp <<  8);
     pieces |= emp & (pieces << 16);
@@ -171,9 +171,13 @@ uint64_t eastattack(uint64_t pieces, uint64_t emp) {
    pieces |= emp & (pieces << 4);
    return pieces<<1 & notafile;
 }
-//TEM ERRO!!!
+
 uint64_t genrookattack(uint64_t pieces, uint64_t emp) {
     return eastattack(pieces, emp) | westattack(pieces, emp) | northattack(pieces, emp) | southattack(pieces, emp);
+}
+
+uint64_t genrookmask(uint64_t pieces) {
+    return (eastfill(pieces, 9187201950435737471ULL)& ~pieces) | (westfill(pieces, 18374403900871474942ULL) & ~pieces) | (northfill(pieces, 72057594037927935ULL) & ~pieces) | (southfill(pieces, 18446744073709551360ULL) & ~pieces);
 }
 
 uint64_t genbishopattack(uint64_t pieces, uint64_t emp) {

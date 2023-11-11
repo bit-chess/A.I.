@@ -24,7 +24,7 @@ uint64_t eastfill(uint64_t pieces, uint64_t emp);
 uint64_t eastattack(uint64_t pieces, uint64_t emp);
 uint64_t genrookattack(uint64_t pieces, uint64_t emp);
 uint64_t genbishopattack(uint64_t pieces, uint64_t emp);
-
+uint64_t genrookmask(uint64_t pieces);
 
 
 #endif
